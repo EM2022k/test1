@@ -11,6 +11,7 @@
         .image-container {
             width: auto;
             height: auto;
+            position: relative; 
         }
         
         img {
