@@ -1,38 +1,41 @@
-const imgs = document.querySelectorAll(".container img");
-const dots = document.querySelectorAll(".dot i");
-const leftArrow = document.querySelector(".arrow-left");
-const rightArrow = document.querySelector(".arrow-right");
+var main = function() {
 
-let currentIndex = 0;
-let time = 5000; // default time for auto slideshow
+	var paused = false
 
-const defClass = (startPos, index) => {
-  for (let i = startPos; i < imgs.length; i++) {
-    imgs[i].style.display = "none";
-    dots[i].classList.remove("fa-dot-circle");
-    dots[i].classList.add("fa-circle");
-  }
-  imgs[index].style.display = "block";
-  dots[index].classList.add("fa-dot-circle");
+	$('.arrowR').click(function() {
+		paused = true;
+		$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	});
+		
+	$('.arrowL').click(function() {
+		paused = true;
+		$('#slideshow > div:last')
+		.fadeIn(1000)
+		.prependTo('#slideshow')
+		.next()
+		.fadeOut(1000)
+		.end();
+	});
+
+
+	
+	setInterval(function() {
+		if (paused === false) { 
+			$('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		};
+	},  5000);
+   
+	
 };
 
-defClass(1, 0);
-
-leftArrow.addEventListener("click", function(){
-  currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
-  defClass(0, currentIndex);
-});
-
-rightArrow.addEventListener("click", function(){
-  currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
-  defClass(0, currentIndex);
-});
-
-const startAutoSlide = () => {
-  setInterval(() => {
-    currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
-    defClass(0, currentIndex);
-  }, time);
-};
-
-startAutoSlide(); // Start the slideshow
+$(document).ready(main);
