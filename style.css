@@ -17,18 +17,10 @@ body {
     vertical-align: middle;
 }
         
-        image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        }
-        
-        img {
-        height: 100%;
-        margin: auto;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        }
+     video {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
     </style>
