@@ -30,21 +30,9 @@ ul {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 36px;
 }
 
-a:link { 
-  text-decoration: none; 
-} 
-a:visited { 
-  text-decoration: none; 
-} 
-a:hover { 
-  text-decoration: none; 
-} 
-a:active { 
-  text-decoration: none; 
-}
 
 
     </style>
