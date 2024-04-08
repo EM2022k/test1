@@ -9,9 +9,12 @@ html {
 }
 
 body {
+    height: 100%;
+    width: 100%;
     display: table-cell;
     vertical-align: middle;
     background-image: url("slimesitebackground.png")
+    background-size: cover;
 }
         
 video {
