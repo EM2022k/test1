@@ -11,6 +11,7 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+    background-image: url("slimesitebackground.png")
 }
         
 video {
