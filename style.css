@@ -23,6 +23,10 @@ video {
     transform: translate(-50%, -50%);
 }
 
+a:link {
+ text-decoration: none;
+}
+
 ul {
   list-style-type: none;
   text-align: center;
