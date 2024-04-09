@@ -20,13 +20,13 @@ video {
     transform: translate(-50%, -50%);
 }
 
-ul {
+li {
   list-style-type: none;
   text-align: center;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 12px;
+  font-size: 48px;
 }
 
